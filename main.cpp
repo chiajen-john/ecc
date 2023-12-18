@@ -1,13 +1,13 @@
-#if 1
-    #define M 4 
-    #define K 3 
-    #define N 7
-#endif
-
-#include <cstdio>
 #include "ecc.h"
 
+UINT vector = 0b1110;
+struct BIN test = BIN(vector);
+
 int main (int argc, char *argv[]) {
-    printf("success\n");
+    test.BINprint();
+    hamming(&test);
+    test.BINprint();
+    hamming(&test);
+    test.BINprint();
     return 0;
 }
